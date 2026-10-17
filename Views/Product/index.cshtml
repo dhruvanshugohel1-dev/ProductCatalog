@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<ProductCatalog.Models.Product>
+
+<h2>Product Catalog</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>₹@p.Price</td>
+            <td>@p.Category</td>
+        </tr>
+    }
+</table>
